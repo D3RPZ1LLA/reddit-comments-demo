@@ -9,10 +9,12 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
+import store from 'store'
 
 const PostsIndex = props => (
-  <h1>Post Index</h1>
+  <Provider store={store()}>
+    <h1>Post Index</h1>
+  </Provider>
 )
 
 document.addEventListener('DOMContentLoaded', () => {
