@@ -9,11 +9,13 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import store from 'store'
+import PostList from 'components/PostList'
 
 const PostsIndex = props => (
   <Provider store={store()}>
-    <h1>Post Index</h1>
+    <PostList />
   </Provider>
 )
 
