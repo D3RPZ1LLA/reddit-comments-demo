@@ -1,10 +1,30 @@
 {
   "name": "reddit_app",
   "private": true,
+  "scripts": {
+    "test": "NODE_ENV=test karma start"
+  },
   "dependencies": {
-    "@rails/webpacker": "3.5"
+    "@babel/polyfill": "^7.2.5",
+    "@rails/webpacker": "3.5",
+    "axios": "^0.18.0",
+    "babel-preset-react": "^6.24.1",
+    "jquery": "^3.3.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.1"
   },
   "devDependencies": {
+    "enzyme": "^3.8.0",
+    "jasmine": "^3.3.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-webpack": "^3.0.5",
     "webpack-dev-server": "2.11.2"
   }
 }
