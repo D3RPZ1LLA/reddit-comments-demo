@@ -1,3 +1,89 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #dae0e6;
+  font-family: 'Roboto';
+}
+
+
+.posts-list {
+  padding-top: 100px;
+  width: 990px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .post {
+    margin: 25px 0;
+    padding: 15px 15px 0 15px;
+    background: white;
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    &:hover {
+      border: solid 1px #757575;
+    }
+
+    .username {
+      color: #787c7e;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .title {
+      color: #222222;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+
+    .message {
+      color: #1a1a1b;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .commentable {
+      .comment-reply {
+        margin-bottom: 10px;
+
+        input[type='text'] {
+          outline: none;
+          border: solid 1px #cccccc;
+          padding: 5px 10px;
+          border-radius: 3px;
+
+          &:focus {
+            border: solid 1px #757575;
+          }
+        }
+
+        input[type='submit'] {
+          margin-left: 10px;
+          padding: 5px 10px;
+          border-radius: 3px;
+          border: 0;
+          background: #708193;
+          outline: 0;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .comments-message {
+        color: #787c7e;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .comment-list {
+        padding-top: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+}
