@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getComments } from 'actions/commentActions'
 import Comment from 'components/Comment'
+import CommentReply from 'components/CommentReply'
 
 class Commentable extends Component {
   constructor (props) {
@@ -25,6 +26,7 @@ class Commentable extends Component {
     let commentsMessage = `${this.state.showComments ? 'hide' : 'show'} comments`
     return (
       <div className='commentable'>
+        <CommentReply params={ this.props.params } />
         <div className='comments-message' onClick={ this.toggleComments.bind(this) }>
           { commentsMessage }
         </div>

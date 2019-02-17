@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getPosts } from 'actions/postActions'
 import Post from 'components/Post'
