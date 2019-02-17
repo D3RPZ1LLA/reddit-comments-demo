@@ -6,9 +6,9 @@ const Post = props => {
 
   return (
     <div className='post'>
-      <h5 className='username'>Posted by u/'props.post.author.username'</h5>
-      <h3 className='title'>'props.post.title'</h3>
-      <p  className='message'>'props.post.message'</p>
+      <h5 className='username'>Posted by u/{ props.post.author.username }</h5>
+      <h3 className='title'>{ props.post.title }</h3>
+      <p  className='message'>{ props.post.message }</p>
     </div>
   )
 }
