@@ -12,10 +12,10 @@ const api = async (options) => {
   const { method, path, params } = options
 
   let json
-  if (method == 'GET') {
-    json = await axiosInstance.get(path)
-  } else {
+  if (method == 'POST') {
     json = await axiosInstance.post(path, params)
+  } else {
+    json = await axiosInstance.get(path)
   }
 
   if (json.status == 200) {

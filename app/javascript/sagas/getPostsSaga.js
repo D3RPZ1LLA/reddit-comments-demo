@@ -1,7 +1,7 @@
 import { takeLatest, put, call } from 'redux-saga/effects'
 
-import { GET_POSTS } from 'actionTypes/postActionTypes'
 import { getPostsDone, getPostsFailed } from 'actions/postActions'
+import { GET_POSTS } from 'actionTypes/postActionTypes'
 import getPostsService from 'services/getPostsService'
 
 function* getPostsSaga() {

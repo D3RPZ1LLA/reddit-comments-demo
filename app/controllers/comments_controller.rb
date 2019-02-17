@@ -11,10 +11,7 @@ class CommentsController < ApplicationController
   end
 
   def index
-    render json: Comment.where(
-      commentable_id: index_params[:commentable_id],
-      commentable_type: index_params[:commentable_type].capitalize
-    ).map(&:serialize)
+    render json: Comment.where(index_params).map(&:serialize)
   end
 
   private
@@ -27,6 +24,8 @@ class CommentsController < ApplicationController
   end
 
   def index_params
-    params.permit(:commentable_type, :commentable_id)
+    strong_param = params.permit(:commentable_type, :commentable_id)
+    strong_param[:commentable_type] = strong_param[:commentable_type]&.capitalize
+    strong_param
   end
 end
