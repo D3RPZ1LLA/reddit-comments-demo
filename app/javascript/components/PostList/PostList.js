@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { getPosts } from 'actions/postActions'
 import Post from 'components/Post'
 
 class PostList extends Component {
+  componentDidMount () { this.props.dispatch(getPosts()) }
+
   renderPosts () {
     return this.props.postIds.map((postId) => (
-      <Post key={ postId } />
+      <Post key={ postId } post={ this.props.posts[postId] } />
     ))
   }
 
@@ -20,4 +23,8 @@ class PostList extends Component {
   }
 }
 
-export default PostList
+const mapStateToProps = (state) => ({
+  postIds: Object.keys(state.posts.list),
+  posts: state.posts.list
+})
+export default connect(mapStateToProps)(PostList)
