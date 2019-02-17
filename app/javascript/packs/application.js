@@ -15,7 +15,7 @@ import PostList from 'components/PostList'
 
 const PostsIndex = props => (
   <Provider store={store()}>
-    <PostList />
+    <PostList postIds={[1, 2, 3]} />
   </Provider>
 )
 

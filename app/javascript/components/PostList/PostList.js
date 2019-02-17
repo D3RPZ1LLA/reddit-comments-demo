@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Post from 'components/Post'
 
 class PostList extends Component {
   renderPosts () {
-    return (
-      <div></div>
-    )
+    return this.props.postIds.map((postId) => (
+      <Post key={ postId } />
+    ))
   }
 
   render() {
